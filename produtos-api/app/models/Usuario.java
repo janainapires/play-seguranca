@@ -19,6 +19,7 @@ public class Usuario extends Model {
     private String email;
     @Constraints.Required(message = "Você precisa fornecener uma senha")
     private String senha;
+    private boolean verificado;
 
     public Long getId() {
         return id;
@@ -50,5 +51,13 @@ public class Usuario extends Model {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public boolean isVerificado() {
+        return verificado;
+    }
+
+    public void setVerificado(boolean verificado) {
+        this.verificado = verificado;
     }
 }
